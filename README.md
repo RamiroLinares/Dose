@@ -2,7 +2,7 @@
 A complete library solution for movies and TV Shows. Display and view your purchased content via the web using a beautiful UI.
 
 ### Features
-* Full TV Show support
+* Full TV Show support.
 * Full Movie support
 * Support for multiple libraries
 * Track current time on movies and TV Shows
