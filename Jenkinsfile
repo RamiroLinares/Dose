@@ -6,12 +6,13 @@ pipeline {
       contentServerImageName = "jalafoundation/dose-content-server"
       registryCredential = 'jalafoundation-registry'
       dockerImage = ''
+      dockerImage2 = ''
     }
 
     stages {
         stage('Cloning Git') {
           steps {
-            git([url: 'https://github.com/jala-bootcamp/Dose.git', branch: 'enable_ci'])
+            git([url: 'https://github.com/RamiroLinares/Dose.git', branch: 'enable_ci'])
           }
         }
         stage('Build Main Server') {
@@ -23,6 +24,24 @@ pipeline {
             }
         }
         stage('Publish Main Server') {
+            steps {
+              script {
+                docker.withRegistry( '', registryCredential ) {
+                  dockerImage.push("$BUILD_NUMBER")
+                   dockerImage.push('latest')
+                 }
+               }
+            }
+        }
+        stage('Build Content Server') {
+            steps {
+                echo 'Building content server..'
+                script {
+                  dockerImage2 = docker.build(contentServerImageName, "./ContentServer")
+                }
+            }
+        }
+        stage('Publish Content Server') {
             steps {
               script {
                 docker.withRegistry( '', registryCredential ) {
