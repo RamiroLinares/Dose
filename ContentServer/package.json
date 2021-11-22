@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@babel/preset-react": "7.10.1",
+    "@babel/plugin-proposal-class-properties": "7.10.1",
     "async-lock": "^1.2.4",
     "babel-loader": "^8.1.0",
     "babel-preset-react": "^6.24.1",
