@@ -11,7 +11,7 @@
   "dependencies": {
     "@babel/preset-react": "7.10.1",
     "async-lock": "^1.2.4",
-    "babel-loader": "^8.1.0"",
+    "babel-loader": "^8.1.0",
     "babel-preset-react": "7.10.1",
     "chokidar": "^3.4.0",
     "fluent-ffmpeg": "^2.1.2",
