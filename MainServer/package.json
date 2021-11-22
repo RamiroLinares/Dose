@@ -19,7 +19,7 @@
     "node-async-locks": "^2.0.0",
     "pg-promise": "^10.5.5",
     "plyr": "^3.6.2",
-    "react": "17.0.2",
+    "react": "16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-bottom-scroll-listener": "^5.0.0",
     "react-dom": "16.13.1",
